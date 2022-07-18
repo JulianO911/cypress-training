@@ -1,0 +1,26 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "This is a Workshop about Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulianO911/cypress-training.git"
+  },
+  "keywords": [
+    "ui-testing",
+    "dojo",
+    "practice",
+    "cypress"
+  ],
+  "author": "Julian Ospina <julianosm911@gmail.com> (JulianO911)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JulianO911/cypress-training/issues"
+  },
+  "homepage": "https://github.com/JulianO911/cypress-training#readme"
+}
+
