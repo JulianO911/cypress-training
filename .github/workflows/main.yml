@@ -16,5 +16,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run lint
-    - name: Run tests
-      run: npm run test:open
+    - name: UI E2E Tests
+      uses: cypress-io/github-action@v4
+      with:
+        browser: chrome
+        headed: true
