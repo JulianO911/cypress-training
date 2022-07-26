@@ -15,8 +15,8 @@ describe("Buy a t-shirt", () => {
     which is the Sign In button */
     cy.get("button[id='SubmitLogin']").click();
     /* Click in the span label which is inside a button label and, which at the
-    same time is inside in a class named cart_navigation. This is the 'proceed to 
-    checkout button */ 
+    same time is inside in a class named cart_navigation. This is the 'proceed to
+    checkout button */
     cy.get(".cart_navigation button span").click();
     /* click in the checkbutton wich has an id equals to 'cgv' */
     cy.get("#cgv").click();
