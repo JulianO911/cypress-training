@@ -20,7 +20,7 @@ describe("Buy a t-shirt", () => {
     ShopingCart.proceedToCheckout();
 
     // Login
-    Login.log("aperdomobo@gmail.com","WorkshopProtractor");
+    Login.log("aperdomobo@gmail.com", "WorkshopProtractor");
 
     // Address
     AddressStep.proceedToCheckout();
