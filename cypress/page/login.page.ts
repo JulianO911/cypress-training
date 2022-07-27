@@ -3,16 +3,11 @@ class Login {
     private static passwordLabel: string = "#passwd";
     private static submitButton: string = "#SubmitLogin";
 
-    public static emailInput(email: string): void {
+    public static log(email: string,password: string): void {
         cy.get(Login.emailLabel).type(email);
-    }
-
-    public static passwordInput(password: string): void {
+        cy.get(Login.submitButton).click();
         cy.get(Login.passwordLabel).type(password);
     }
-    public static submit(): void {
-        cy.get(Login.submitButton).click();
-  }
 }
 
 export { Login }
