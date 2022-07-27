@@ -1,8 +1,12 @@
 class ShopingCart {
-    private static proceedToCheckoutButton: string =  ".cart_navigation span";
+    private proceedToCheckoutButton: string;
 
-    public static proceedToCheckout(): void {
-        cy.get(ShopingCart.proceedToCheckoutButton).click()
+    constructor(){
+        this.proceedToCheckoutButton =  ".cart_navigation span"
+    }
+
+    public proceedToCheckout(): void {
+        cy.get(this.proceedToCheckoutButton).click()
     }
 }
 

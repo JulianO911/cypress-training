@@ -1,12 +1,18 @@
 class Login {
-    private static emailLabel: string = "#email";
-    private static passwordLabel: string = "#passwd";
-    private static submitButton: string = "#SubmitLogin";
+    private emailLabel: string;
+    private passwordLabel: string;
+    private submitButton: string;
 
-    public static log(email: string,password: string): void {
-        cy.get(Login.emailLabel).type(email);
-        cy.get(Login.passwordLabel).type(password);
-        cy.get(Login.submitButton).click();
+    constructor(){
+        this.emailLabel = "#email";
+        this.passwordLabel = "#passwd";
+        this.submitButton = "#SubmitLogin";
+    }
+
+    public log(email: string,password: string): void {
+        cy.get(this.emailLabel).type(email);
+        cy.get(this.passwordLabel).type(password);
+        cy.get(this.submitButton).click();
     }
 }
 

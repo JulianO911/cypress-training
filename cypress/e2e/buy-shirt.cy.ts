@@ -7,31 +7,39 @@ import {
   ShippingStep,
   PaymentStep} from "../page/index";
 
+const menuContentPage = new MenuContentPage();
+const productsList = new ProductsList();
+const shopingCart = new ShopingCart();
+const login = new Login();
+const addressStep = new AddressStep();
+const shippingStep = new ShippingStep();
+const paymentStep = new PaymentStep();
+
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
     // Init
-    MenuContentPage.visitMenuContentPage();
-    MenuContentPage.goToTShirtMenu();
+    menuContentPage.visitMenuContentPage();
+    menuContentPage.goToTShirtMenu();
 
-    ProductsList.addToChart();
-    ProductsList.proceedToCheckout();
+    productsList.addToChart();
+    productsList.proceedToCheckout();
 
     // Summary
-    ShopingCart.proceedToCheckout();
+    shopingCart.proceedToCheckout();
 
     // Login
-    Login.log("aperdomobo@gmail.com", "WorkshopProtractor");
+    login.log("aperdomobo@gmail.com", "WorkshopProtractor");
 
     // Address
-    AddressStep.proceedToCheckout();
+    addressStep.proceedToCheckout();
 
     // Shipping
-    ShippingStep.check();
-    ShippingStep.proceedToCheckout();
+    shippingStep.check();
+    shippingStep.proceedToCheckout();
 
     // Payment
-    PaymentStep.payment();
-    PaymentStep.proceedToCheckout();
+    paymentStep.payment();
+    paymentStep.proceedToCheckout();
 
     cy.get("#center_column > div > p > strong").should(
         "have.text",

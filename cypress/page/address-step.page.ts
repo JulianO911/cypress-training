@@ -1,7 +1,13 @@
-import { ShopingCart } from "./shoping-cart.page";
+class AddressStep{
+    private proceedToCheckoutButton: string;
 
-class AddressStep extends ShopingCart {
+    constructor(){
+        this.proceedToCheckoutButton =  ".cart_navigation span"
+    }
 
+    public proceedToCheckout(): void {
+        cy.get(this.proceedToCheckoutButton).click()
+    }
 }
 
 export { AddressStep }

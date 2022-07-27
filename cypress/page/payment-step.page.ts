@@ -1,10 +1,18 @@
-import { ShopingCart } from "./shoping-cart.page";
+class PaymentStep{
+    private proceedToCheckoutButton: string;
+    private paymentButton: string;
 
-class PaymentStep extends ShopingCart {
-    private static paymentButton: string = ".bankwire";
+    constructor(){
+        this.proceedToCheckoutButton =  ".cart_navigation span"
+        this.paymentButton = ".bankwire"
+    }
 
-    public static payment(): void {
-        cy.get(PaymentStep.paymentButton).click()
+    public payment(): void {
+        cy.get(this.paymentButton).click()
+    }
+
+    public proceedToCheckout(): void {
+        cy.get(this.proceedToCheckoutButton).click()
     }
 }
 

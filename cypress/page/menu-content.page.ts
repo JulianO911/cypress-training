@@ -1,13 +1,18 @@
 class MenuContentPage {
-    private static tShirtMenu: string = "#block_top_menu > ul > li:nth-child(3) > a";
-    private static menuContentPageURL: string = "http://automationpractice.com/";
+  private tShirtMenu: string;
+  private menuContentPageURL: string
 
-    public static visitMenuContentPage(): void {
-        cy.visit(MenuContentPage.menuContentPageURL)
-    }
+  constructor() {
+      this.tShirtMenu = "#block_top_menu > ul > li:nth-child(3) > a";
+      this.menuContentPageURL = "http://automationpractice.com/"
+  }
 
-    public static goToTShirtMenu(): void {
-    cy.get(MenuContentPage.tShirtMenu).click()
+  public visitMenuContentPage(): void {
+      cy.visit(this.menuContentPageURL)
+  }
+
+  public goToTShirtMenu(): void {
+      cy.get(this.tShirtMenu).click()
   }
 }
 

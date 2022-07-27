@@ -1,13 +1,17 @@
 class ProductsList {
-    private static addToChartButton: string =  "#center_column a.button.ajax_add_to_cart_button.btn.btn-default";
-    private static proceedToCheckoutButton: string = "[style*='display: block;'] .button-container > a";
+    private addToChartButton: string;
+    private proceedToCheckoutButton: string;
 
-    public static addToChart(): void {
-        cy.get(ProductsList.addToChartButton).click()
+    constructor(){
+        this.addToChartButton = "#center_column a.button.ajax_add_to_cart_button.btn.btn-default";
+        this.proceedToCheckoutButton = "[style*='display: block;'] .button-container > a";
+    }
+    public addToChart(): void {
+        cy.get(this.addToChartButton).click()
     }
 
-    public static proceedToCheckout(): void {
-        cy.get(ProductsList.proceedToCheckoutButton).click()
+    public proceedToCheckout(): void {
+        cy.get(this.proceedToCheckoutButton).click()
     }
 }
 
