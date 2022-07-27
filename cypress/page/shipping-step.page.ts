@@ -6,7 +6,7 @@ class ShippingStep {
         this.proceedToCheckoutButton =  ".cart_navigation span"
         this.checkButton = "#cgv"
     }
-    public check(): void {
+    public checkTerms(): void {
         cy.get(this.checkButton).click()
     }
 

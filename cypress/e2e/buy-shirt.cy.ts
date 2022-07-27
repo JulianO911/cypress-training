@@ -17,33 +17,23 @@ const paymentStep = new PaymentStep();
 
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
-    // Init
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
 
     productsList.addToChart();
     productsList.proceedToCheckout();
 
-    // Summary
     shopingCart.proceedToCheckout();
 
-    // Login
-    login.log("aperdomobo@gmail.com", "WorkshopProtractor");
+    login.login("aperdomobo@gmail.com", "WorkshopProtractor");
 
-    // Address
     addressStep.proceedToCheckout();
 
-    // Shipping
-    shippingStep.check();
+    shippingStep.checkTerms();
     shippingStep.proceedToCheckout();
 
-    // Payment
-    paymentStep.payment();
+    paymentStep.paymentByBankWire();
     paymentStep.proceedToCheckout();
-
-    cy.get("#center_column > div > p > strong").should(
-        "have.text",
-        "Your order on My Store is complete.",
-    );
+    paymentStep.getConfirmationMessage();
   });
 });

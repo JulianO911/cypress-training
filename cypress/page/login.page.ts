@@ -9,7 +9,7 @@ class Login {
         this.submitButton = "#SubmitLogin";
     }
 
-    public log(email: string,password: string): void {
+    public login(email: string,password: string): void {
         cy.get(this.emailLabel).type(email);
         cy.get(this.passwordLabel).type(password);
         cy.get(this.submitButton).click();
