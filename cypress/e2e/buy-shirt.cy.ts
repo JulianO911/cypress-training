@@ -1,4 +1,11 @@
-import {Login, MenuContentPage, ProductsList, ShopingCart, AddressStep, ShippingStep, PaymentStep} from "../page/index";
+import {
+  Login,
+  MenuContentPage,
+  ProductsList,
+  ShopingCart,
+  AddressStep,
+  ShippingStep,
+  PaymentStep} from "../page/index";
 
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
