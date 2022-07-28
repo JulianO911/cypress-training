@@ -1,11 +1,12 @@
 class PaymentStep{
     private proceedToCheckoutButton: string;
     private paymentButton: string;
-    private static confirmationMessage: any;
+    private confirmationMessage: any;
 
     constructor(){
         this.proceedToCheckoutButton =  ".cart_navigation span"
         this.paymentButton = ".bankwire"
+        this.confirmationMessage = "#center_column > div > p > strong"
     }
 
     public paymentByBankWire(): void {
@@ -17,8 +18,7 @@ class PaymentStep{
     }
 
     public getConfirmationMessage(): any {
-        PaymentStep.confirmationMessage = cy.get("#center_column > div > p > strong");
-        return  PaymentStep.confirmationMessage;
+        return  cy.get(this.confirmationMessage);
     }
 }
 
