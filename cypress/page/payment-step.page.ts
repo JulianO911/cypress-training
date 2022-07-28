@@ -1,6 +1,7 @@
 class PaymentStep{
     private proceedToCheckoutButton: string;
     private paymentButton: string;
+    private confirmationMessage: any = cy.get("#center_column > div > p > strong");
 
     constructor(){
         this.proceedToCheckoutButton =  ".cart_navigation span"
@@ -16,7 +17,7 @@ class PaymentStep{
     }
 
     public getConfirmationMessage(): any {
-        return cy.get("#center_column > div > p > strong");
+        return  this.confirmationMessage;
     }
 }
 
