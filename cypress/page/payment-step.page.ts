@@ -15,11 +15,8 @@ class PaymentStep{
         cy.get(this.proceedToCheckoutButton).click()
     }
 
-    public getConfirmationMessage(): void {
-        cy.get("#center_column > div > p > strong").should(
-            "have.text",
-            "Your order on My Store is complete.",
-        );
+    public getConfirmationMessage(): any {
+        return cy.get("#center_column > div > p > strong");
     }
 }
 

@@ -34,6 +34,9 @@ describe("Buy a t-shirt", () => {
 
     paymentStep.paymentByBankWire();
     paymentStep.proceedToCheckout();
-    paymentStep.getConfirmationMessage();
+    paymentStep.getConfirmationMessage().should(
+        "have.text",
+        "Your order on My Store is complete.",
+    );
   });
 });
