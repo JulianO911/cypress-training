@@ -3,9 +3,7 @@ class ProductsList {
     private proceedToCheckoutButton: string;
 
     constructor(){
-        // Just get a span that's inside in a ajax_add_to_cart class button.
-        this.addToChartButton = ".ajax_add_to_cart_button[title='Add to cart']";
-        // Get the a label that's inside in a label with layer_cart id.
+        this.addToChartButton = "[title='Add to cart']";
         this.proceedToCheckoutButton = "a[title='Proceed to checkout']";
     }
     public addToChart(): void {

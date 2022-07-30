@@ -3,9 +3,7 @@ class MenuContentPage {
   private menuContentPageURL: string
 
   constructor() {
-      /* Now the selector searchs the last li in Ul and and a label
-        that is inside the li */
-      this.tShirtMenu = "#block_top_menu > ul > li:last-child a[title='T-shirts']";
+      this.tShirtMenu = "#block_top_menu > ul > li > a[title='T-shirts']";
       this.menuContentPageURL = "http://automationpractice.com/"
   }
 
