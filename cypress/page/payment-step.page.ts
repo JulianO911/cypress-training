@@ -4,7 +4,7 @@ class PaymentStep{
     private confirmationMessage: any;
 
     constructor(){
-        this.proceedToCheckoutButton =  ".cart_navigation span"
+        this.proceedToCheckoutButton =  ".cart_navigation button[type='submit']"
         this.paymentButton = ".bankwire"
         this.confirmationMessage = "#center_column > div > p > strong"
     }

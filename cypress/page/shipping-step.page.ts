@@ -3,7 +3,7 @@ class ShippingStep {
     private checkButton: string = "#cgv";
 
     constructor(){
-        this.proceedToCheckoutButton =  ".cart_navigation span"
+        this.proceedToCheckoutButton =  ".cart_navigation button[type='submit']"
         this.checkButton = "#cgv"
     }
     public checkTerms(): void {
