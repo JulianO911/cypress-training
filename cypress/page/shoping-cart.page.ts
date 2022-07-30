@@ -3,7 +3,7 @@ class ShopingCart {
 
     constructor(){
         // There's no need to improve this selector.
-        this.proceedToCheckoutButton =  ".cart_navigation span"
+        this.proceedToCheckoutButton =  ".cart_navigation a[title='Proceed to checkout']"
     }
 
     public proceedToCheckout(): void {
