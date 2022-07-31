@@ -3,8 +3,8 @@ class ProductsList {
     private proceedToCheckoutButton: string;
 
     constructor(){
-        this.addToChartButton = "#center_column a.button.ajax_add_to_cart_button.btn.btn-default";
-        this.proceedToCheckoutButton = "[style*='display: block;'] .button-container > a";
+        this.addToChartButton = "[title='Add to cart']";
+        this.proceedToCheckoutButton = "a[title='Proceed to checkout']";
     }
     public addToChart(): void {
         cy.get(this.addToChartButton).click()
