@@ -1,7 +1,7 @@
 import {
   MenuContentPage,
-  DressesListPage}
-  from "../page/index";
+  DressesListPage
+} from "../page/index";
 
 describe("the user navigates to the dresses page should", () => {
   let menuContentPage: MenuContentPage;
