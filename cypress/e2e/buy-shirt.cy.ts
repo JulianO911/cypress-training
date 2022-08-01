@@ -17,6 +17,7 @@ const paymentStep = new PaymentStep();
 
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
+    const orderCompleteText = ["Your order on My Store is complete."];
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
 
@@ -34,9 +35,6 @@ describe("Buy a t-shirt", () => {
 
     paymentStep.paymentByBankWire();
     paymentStep.proceedToCheckout();
-    paymentStep.getConfirmationMessage().should(
-        "have.text",
-        "Your order on My Store is complete.",
-    );
+    paymentStep.getConfirmationMessage(orderCompleteText);
   });
 });
