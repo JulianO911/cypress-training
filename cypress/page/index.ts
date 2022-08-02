@@ -6,3 +6,6 @@ export { AddressStep } from "./address-step.page";
 export { ShippingStep } from "./shipping-step.page";
 export { PaymentStep } from "./payment-step.page";
 export { DressesListPage } from "./dresses-list.page";
+export { FillingForm } from "./filling-form.page";
+export { Hobbies } from "./hobbies-enum.page";
+export { Modal } from "./modal.page";
