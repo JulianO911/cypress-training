@@ -3,7 +3,7 @@ import {
   Modal,
 } from "../page/index";
 
-describe.only("filling form verification", () => {
+describe("filling form verification", () => {
   let fillingForm: FillingForm;
   let modal: Modal;
   before(() => {

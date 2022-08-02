@@ -82,7 +82,6 @@ class FillingForm {
             cy.get(this.citySelector).click({force: true}).type(`${arrowPressingCity}{enter}`)
     }
 
-
     private checkCityNCR(city: string, arrowPressing: string): string{
         switch(city){
             case "Gurgaon":
@@ -94,6 +93,7 @@ class FillingForm {
         }
         return arrowPressing;
     }
+
     private checkCityUP(city: string, arrowPressing: string): string{
             switch(city){
                 case "Lucknow":
@@ -123,10 +123,6 @@ class FillingForm {
         }
         return arrowPressing;
     }
-
-
-
-
     public submitForm(textToCheck: string[]): void{
         cy.get(this.submit).submit().get("#example-modal-sizes-title-lg")
         .each((item, index) => {
