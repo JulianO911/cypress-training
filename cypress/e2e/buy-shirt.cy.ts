@@ -30,7 +30,7 @@ describe("Buy a t-shirt", () => {
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
 
-    productsList.addToChart();
+    productsList.addToChart("Faded Short Sleeve T-shirts");
     productsList.proceedToCheckout();
 
     shopingCart.proceedToCheckout();
