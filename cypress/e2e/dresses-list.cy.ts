@@ -1,7 +1,12 @@
 import {
   MenuContentPage,
+<<<<<<< HEAD
   DressesListPage}
   from "../page/index";
+=======
+  DressesListPage,
+} from "../page/index";
+>>>>>>> e6b40d675795e41e3e797d8ced6c9b12deeae938
 
 describe("the user navigates to the dresses page should", () => {
   let menuContentPage: MenuContentPage;
