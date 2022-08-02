@@ -1,6 +1,6 @@
 import { Hobbies } from "./hobbies-enum.page";
 
-class FillingForm {
+class FillingFormPage {
     private nameSelector: string
     private lastNameSelector: string
     private emailSelector: String
@@ -47,7 +47,7 @@ class FillingForm {
             cy.get(this.emailSelector).type(personalInformation['email'])
             cy.get(this.genderSelector).find(
                 `[value='${personalInformation['gender']}']`).click({force: true})
-            cy.get(this.dateOfBirthSelector).type('{selectall}').type(personalInformation['dateOfBirth'])
+            cy.get(this.dateOfBirthSelector).type(`{selectall} ${personalInformation['dateOfBirth']}`)
             cy.get(this.mobileNumberSelector).type(personalInformation['mobileNumber'])
             hobbiesValues.forEach((item) => {
                 cy.get(this.hobbiesSelector).find(`[value='${item}']`).click({force: true})
@@ -130,4 +130,4 @@ class FillingForm {
           })
     }
 }
-export { FillingForm }
+export { FillingFormPage }

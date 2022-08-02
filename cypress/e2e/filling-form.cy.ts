@@ -1,13 +1,13 @@
 import {
-  FillingForm,
+  FillingFormPage,
   Modal,
 } from "../page/index";
 
 describe("filling form verification", () => {
-  let fillingForm: FillingForm;
+  let fillingForm: FillingFormPage;
   let modal: Modal;
   before(() => {
-    fillingForm = new FillingForm();
+    fillingForm = new FillingFormPage();
     modal = new Modal();
   });
   it("should fill the form", () => {
