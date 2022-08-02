@@ -17,8 +17,10 @@ class PaymentStep{
         cy.get(this.proceedToCheckoutButton).click()
     }
 
-    public getConfirmationMessage(): any {
-        return  cy.get(this.confirmationMessage);
+    public getConfirmationMessage(orderCompleteText: string[]): void {
+        cy.get(this.confirmationMessage).each((item, index) => {
+            cy.wrap(item).should("contain.text", orderCompleteText[index])
+        });
     }
 }
 
