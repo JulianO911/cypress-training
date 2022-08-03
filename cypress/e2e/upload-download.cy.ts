@@ -8,9 +8,9 @@ describe("uploading a file test", () => {
   });
 
   it("testing the title after upload file", () => {
-    const data = ["example.json"];
+    const data = "example.json";
     upload.visitWebSite();
-    upload.uploadFile("../e2e/fixtures/example.json");
+    upload.uploadFile(data);
     upload.verifyTitle(data);
   });
 });

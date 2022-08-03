@@ -21,10 +21,8 @@ class Upload {
         cy.get(this.uploadFileSelector).click()
     }
 
-    public verifyTitle(data: string[]): void {
-        cy.get(this.titleNameSelector).each((item, index) => {
-            cy.wrap(item).should("contain.text", data[index])
-          })
+    public verifyTitle(data: string): void {
+        cy.get(this.titleNameSelector).should("contains.text",data)
     }
 }
 
