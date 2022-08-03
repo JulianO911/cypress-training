@@ -7,3 +7,6 @@ export { ShippingStep } from "./shipping-step.page";
 export { PaymentStep } from "./payment-step.page";
 export { DressesListPage } from "./dresses-list.page";
 export { Upload } from "./upload.page"
+export { FillingFormPage } from "./filling-form.page";
+export { PersonalInformation } from "./interface.page";
+export { Modal } from "./modal.page";
