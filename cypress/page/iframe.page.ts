@@ -2,13 +2,11 @@ class Iframe{
     private URL: string;
     private iFrameSelector: string;
     private iFrameCssButtonSelector: string;
-    private iFrameCssTitle: string
 
     constructor(){
         this.URL = "https://www.w3schools.com/html/html_iframe.asp"
         this.iFrameSelector = "#main h1"
         this.iFrameCssButtonSelector = "a[title='CSS Tutorial']"
-        this.iFrameCssTitle = "#main h1"
     }
 
     public visit(): void{
