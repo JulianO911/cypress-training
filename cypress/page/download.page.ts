@@ -17,7 +17,7 @@ class Download {
     }
 
     public verifyDownload(path: string): void{
-        cy.readFile(path).should("exist")
+        cy.readFile(`${Cypress.config("downloadsFolder")}/${path}`).should("exist")
     }
 }
 

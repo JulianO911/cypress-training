@@ -22,7 +22,7 @@ describe("uploading and download a file test", () => {
   });
 
   it("download test", () => {
-    const path = "../cypress/downloads/sampleFile.jpeg";
+    const path = "sampleFile.jpeg";
     download.visitWebSite();
     download.downloadFile();
     download.verifyDownload(path);
