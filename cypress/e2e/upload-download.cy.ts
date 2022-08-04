@@ -1,10 +1,17 @@
-import {Upload} from "../page/index";
+import {
+  Upload,
+  Download,
 
-describe("uploading a file test", () => {
+}
+  from "../page/index";
+
+describe("uploading and download a file test", () => {
   let upload: Upload;
+  let download: Download;
 
   before(() => {
     upload = new Upload();
+    download = new Download();
   });
 
   it("testing the title after upload file", () => {
@@ -12,5 +19,12 @@ describe("uploading a file test", () => {
     upload.visitWebSite();
     upload.uploadFile(data);
     upload.verifyTitle(data);
+  });
+
+  it("download text", () => {
+    const path = "../downloads/sampleFile.jpeg";
+    download.visitWebSite();
+    download.downloadFile();
+    download.verifyDownload(path);
   });
 });
