@@ -2,8 +2,7 @@ import {
   Upload,
   Download,
 
-}
-  from "../page/index";
+} from "../page/index";
 
 describe("uploading and download a file test", () => {
   let upload: Upload;
