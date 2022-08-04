@@ -3,9 +3,10 @@ class Iframe{
     private iFrameSelector: string;
     private iFrameCssButtonSelector: string;
 
+
     constructor(){
         this.URL = "https://www.w3schools.com/html/html_iframe.asp"
-        this.iFrameSelector = "#main h1"
+        this.iFrameSelector = "iframe[title='W3Schools HTML Tutorial']"
         this.iFrameCssButtonSelector = "a[title='CSS Tutorial']"
     }
 
@@ -13,19 +14,13 @@ class Iframe{
         cy.visit(this.URL)
       }
       
-    public getFrameTitle(titleElements: string): void{
-        cy.iframe().find(this.iFrameSelector).should("contains.text",titleElements)
+    public getFrameTitle(): any{
+        return cy.iframe(this.iFrameSelector)
       }
       
-    public  goToCssPageInFrame(titleElements: string): void{
-        cy.intercept(
-          this.URL,
-          {
-            delay: 1000,
-          }
-        ).as('getDelayedStories')
-        cy.iframe().find(this.iFrameCssButtonSelector).click()
-        cy.iframe().find(this.iFrameSelector).should("contains.text",titleElements)
+    public  goToCssPageInFrame(): void{
+      cy.iframe(this.iFrameSelector).find(this.iFrameCssButtonSelector).click()
+
       }
 }
 

@@ -1,4 +1,3 @@
-import {css} from "cypress/types/jquery";
 import {Iframe} from "../page/index";
 
 describe("uploading and download a file test", () => {
@@ -8,11 +7,17 @@ describe("uploading and download a file test", () => {
     iframe = new Iframe();
   });
 
-  it("testing the title after upload file", () => {
+  it("testing the HTML title", () => {
     const htmlTitle = "HTML Tutorial";
+    iframe.visit();
+    iframe.getFrameTitle().should("contains.text",htmlTitle);
+  });
+
+  it("testing the CSS title", () => {
     const cssTitle = "CSS Tutorial";
     iframe.visit();
-    iframe.getFrameTitle(htmlTitle);
-    iframe.goToCssPageInFrame(cssTitle);
+    iframe.goToCssPageInFrame();
+    iframe.getFrameTitle().should("contains.text",cssTitle);
   });
+
 });
