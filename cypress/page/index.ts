@@ -10,3 +10,4 @@ export { Upload } from "./upload.page"
 export { FillingFormPage } from "./filling-form.page";
 export { PersonalInformation } from "./interface.page";
 export { Modal } from "./modal.page";
+export { Download } from "./download.page"
