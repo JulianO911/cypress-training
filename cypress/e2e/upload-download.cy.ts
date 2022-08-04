@@ -21,7 +21,7 @@ describe("uploading and download a file test", () => {
     upload.verifyTitle(data);
   });
 
-  it("download text", () => {
+  it("download test", () => {
     const path = "../downloads/sampleFile.jpeg";
     download.visitWebSite();
     download.downloadFile();
