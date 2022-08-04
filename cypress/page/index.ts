@@ -11,3 +11,4 @@ export { FillingFormPage } from "./filling-form.page";
 export { PersonalInformation } from "./interface.page";
 export { Modal } from "./modal.page";
 export { Download } from "./download.page"
+export { Iframe } from "./iframe.page"
