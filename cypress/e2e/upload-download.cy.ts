@@ -22,7 +22,7 @@ describe("uploading and download a file test", () => {
   });
 
   it("download test", () => {
-    const path = "..\\downloads\\sampleFile.jpeg";
+    const path = "../downloads/sampleFile.jpeg";
     download.visitWebSite();
     download.downloadFile();
     download.verifyDownload(path);
