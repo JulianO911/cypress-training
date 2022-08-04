@@ -24,5 +24,6 @@ export default defineConfig({
         json: true,
       },
     },
+    chromeWebSecurity: false 
   },
 });
