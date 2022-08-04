@@ -1,6 +1,6 @@
 import {Iframe} from "../page/index";
 
-describe("uploading and download a file test", () => {
+describe("iframe test", () => {
   let iframe: Iframe;
 
   before(() => {
