@@ -6,7 +6,7 @@ class Iframe{
 
     constructor(){
         this.URL = "https://www.w3schools.com/html/html_iframe.asp"
-        this.iFrameSelector = "iframe[title='W3Schools HTML Tutorial']"
+        this.iFrameSelector = "[title='W3Schools HTML Tutorial']"
         this.iFrameCssButtonSelector = "a[title='CSS Tutorial']"
     }
 
